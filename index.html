@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Licznik ceny pojazdu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+	<h1>Licznik ceny pojazdu</h1>
+	<form>
+        <label>Cena pojazdu: <input type="text" name="cena_pojazdu" id="cena_pojazdu" placeholder="np. 300000"></label>
+        <h6 class="info">*cena nie moze byc podana w formacie "300k", tylko 300000</h6>
+        <h3>Tuning Mechaniczny</h3>
+        <h5>ECU:</h5>
+        <label><input type="radio" name="czesci_ecu" value="brak"> BRAK</label>
+        <label><input type="radio" name="czesci_ecu" value="ECU_V1"> ECU V1</label>
+        <label><input type="radio" name="czesci_ecu" value="ECU_V2"> ECU V2</label>
+        <label><input type="radio" name="czesci_ecu" value="ECU_V3"> ECU V3</label>
+        <label><input type="radio" name="czesci_ecu" value="ECU_V4"> ECU V4</label>
+        <h5>Turbo:</h5>
+        <label><input type="radio" name="czesci_turbo" value="brak"> BRAK</label>
+        <label><input type="radio" name="czesci_turbo" value="Turbo_V1"> Turbo V1</label>
+        <label><input type="radio" name="czesci_turbo" value="Turbo_V2"> Turbo V2</label>
+        <label><input type="radio" name="czesci_turbo" value="Turbo_V3"> Turbo V3</label>
+        <label><input type="radio" name="czesci_turbo" value="Turbo_V4"> Turbo V4</label>
+        <label><input type="radio" name="czesci_turbo" value="Turbo_V5"> Turbo V5</label>
+        <h5>LPG:</h5>
+        <label><input type="radio" name="czesci_lpg" value="brak"> BRAK</label>
+        <label><input type="radio" name="czesci_lpg" value="LPG_25L"> LPG 25L</label>
+        <label><input type="radio" name="czesci_lpg" value="LPG_50L"> LPG 50L</label>
+        <label><input type="radio" name="czesci_lpg" value="LPG_75L"> LPG 75L</label>
+        <h5>Zestawy</h5>
+        <label><input type="radio" name="czesci_zestaw" value="brak"> BRAK</label>
+        <label><input type="radio" name="czesci_zestaw" value="Zestaw.U"> Zestaw Uliczny</label>
+        <label><input type="radio" name="czesci_zestaw" value="Zestaw.W"> Zestaw Wyścigowy</label>
+        <label><input type="radio" name="czesci_zestaw" value="Zestaw.D"> Zestaw Drifterski</label>
+        <label><input type="radio" name="czesci_zestaw" value="Zestaw.T"> Zestaw Torowy</label>
+        <h5>C.F.I</h5>
+        <label><input type="radio" name="czesci_cfi" value="brak"> BRAK</label>
+        <label><input type="radio" name="czesci_cfi" value="C.F.I_V1"> C.F.I V1</label>
+        <label><input type="radio" name="czesci_cfi" value="C.F.I_V2"> C.F.I V2</label>
+        <label><input type="radio" name="czesci_cfi" value="C.F.I_V3"> C.F.I V3</label>
+        <label><input type="radio" name="czesci_cfi" value="C.F.I_V4"> C.F.I V4</label>
+        <label><input type="radio" name="czesci_cfi" value="C.F.I_V5"> C.F.I V5</label>
+        <h5>Napęd</h5>
+        <label><input type="radio" name="czesci_naped" value="brak"> Podstawowy</label>
+        <label><input type="radio" name="czesci_naped" value="RWD"> RWD (tył)</label>
+        <label><input type="radio" name="czesci_naped" value="AWD"> AWD (4x4)</label>
+        <label><input type="radio" name="czesci_naped" value="FWD"> FWD (przód)</label>
+        <label><input type="radio" name="czesci_naped" value="MZN"> Moduł Zmiany Napędu</label>
+        <h5>Bak</h5>
+        <label><input type="radio" name="czesci_bak" value="brak"> Podstawowy</label>
+        <label><input type="radio" name="czesci_bak" value="Bak_100L"> Powiększnie baku 100L</label>
+        <label><input type="radio" name="czesci_bak" value="Bak_125L"> Powiększnie baku 125L</label>
+        <label><input type="radio" name="czesci_bak" value="Bak_150L"> Powiększnie baku 150L</label>
+        <h5>Pozostałe</h5>
+        <label><input type="checkbox" name="czesci_pozostale" value="Radio"> Radio</label>
+        <label><input type="checkbox" name="czesci_pozostale" value="CB"> CB-Radio</label>
+        <label><input type="checkbox" name="czesci_pozostale" value="Ogranicznik"> Ogranicznik</label>
+        <label><input type="checkbox" name="czesci_pozostale" value="Wykrywacz_Fotoradarów"> Wykrywacz Fotoradarów</label>
+        <label><input type="checkbox" name="czesci_pozostale" value="ABS"> System ABS</label>
+        <label><input type="radio" name="czesci_pozostale" value="GZ"> Gwintowane Zawieszenie</label>
+        <label><input type="radio" name="czesci_pozostale" value="Hydra"> Hydraulika</label>
+        <label><input type="radio" name="czesci_pozostale" value="brak"> Brak Hydrauliki i Gwintowanego Zawieszenia</label>
+        <h3>Tuning Wizualny</h3>
+        <h5>Spoilery</h5>
+        <label><input type="radio" name="czesci_spoilery" value="brak"> BRAK</label>
+        <label><input type="radio" name="czesci_spoilery" value="s1000"> Spoiler ID: 1000</label>
+        <label><input type="radio" name="czesci_spoilery" value="s1001"> Spoiler ID: 1001</label>
+        <label><input type="radio" name="czesci_spoilery" value="s1002"> Spoiler ID: 1002</label>
+        <label><input type="radio" name="czesci_spoilery" value="s1003"> Spoiler ID: 1003</label>
+        <label><input type="radio" name="czesci_spoilery" value="s1014"> Spoiler ID: 1014</label>
+        <label><input type="radio" name="czesci_spoilery" value="s1015"> Spoiler ID: 1015</label>
+        <label><input type="radio" name="czesci_spoilery" value="s1016"> Spoiler ID: 1016</label>
+        <label><input type="radio" name="czesci_spoilery" value="s1023"> Spoiler ID: 1023</label>
+        <label><input type="radio" name="czesci_spoilery" value="s1049"> Spoiler ID: 1049</label>
+        <label><input type="radio" name="czesci_spoilery" value="s1050"> Spoiler ID: 1050</label>
+        <label><input type="radio" name="czesci_spoilery" value="s1058"> Spoiler ID: 1058</label>
+        <label><input type="radio" name="czesci_spoilery" value="s1060"> Spoiler ID: 1060</label>
+        <label><input type="radio" name="czesci_spoilery" value="s1138"> Spoiler ID: 1138</label>
+        <label><input type="radio" name="czesci_spoilery" value="s1139"> Spoiler ID: 1139</label>
+        <label><input type="radio" name="czesci_spoilery" value="s1146"> Spoiler ID: 1146</label>
+        <label><input type="radio" name="czesci_spoilery" value="s1147"> Spoiler ID: 1147</label>
+        <label><input type="radio" name="czesci_spoilery" value="s1158"> Spoiler ID: 1158</label>
+        <label><input type="radio" name="czesci_spoilery" value="s1162"> Spoiler ID: 1162</label>
+        <label><input type="radio" name="czesci_spoilery" value="s1163"> Spoiler ID: 1163</label>
+        <h5>Progi</h5>
+        <label><input type="radio" name="czesci_progi" value="brak"> BRAK</label>
+        <label><input type="radio" name="czesci_progi" value="p1007"> Progi ID: 1007 </label>
+        <label><input type="radio" name="czesci_progi" value="p1026"> Progi ID: 1026 </label>
+        <label><input type="radio" name="czesci_progi" value="p1030"> Progi ID: 1030 </label>
+        <label><input type="radio" name="czesci_progi" value="p1036"> Progi ID: 1036 </label>
+        <label><input type="radio" name="czesci_progi" value="p1039"> Progi ID: 1039 </label>
+        <label><input type="radio" name="czesci_progi" value="p1042"> Progi ID: 1042 </label>
+        <label><input type="radio" name="czesci_progi" value="p1047"> Progi ID: 1047 </label>
+        <label><input type="radio" name="czesci_progi" value="p1048"> Progi ID: 1048 </label>
+        <label><input type="radio" name="czesci_progi" value="p1056"> Progi ID: 1056 </label>
+        <label><input type="radio" name="czesci_progi" value="p1057"> Progi ID: 1057 </label>
+        <label><input type="radio" name="czesci_progi" value="p1069"> Progi ID: 1069 </label>
+        <label><input type="radio" name="czesci_progi" value="p1090"> Progi ID: 1090 </label>
+        <label><input type="radio" name="czesci_progi" value="p1093"> Progi ID: 1093 </label>
+        <label><input type="radio" name="czesci_progi" value="p1101"> Progi ID: 1101 </label>
+        <label><input type="radio" name="czesci_progi" value="p1102"> Progi ID: 1102 </label>
+        <label><input type="radio" name="czesci_progi" value="p1106"> Progi ID: 1106 </label>
+        <label><input type="radio" name="czesci_progi" value="p1107"> Progi ID: 1107 </label>
+        <label><input type="radio" name="czesci_progi" value="p1118"> Progi ID: 1118 </label>
+        <label><input type="radio" name="czesci_progi" value="p1119"> Progi ID: 1119 </label>
+        <label><input type="radio" name="czesci_progi" value="p1134"> Progi ID: 1134 </label>
+        <h5>Wydechy</h5>
+        <label><input type="radio" name="czesci_wydechy" value="brak"> BRAK</label>
+        <label><input type="radio" name="czesci_wydechy" value="w1018"> Wydech ID: 1018 </label>
+        <label><input type="radio" name="czesci_wydechy" value="w1019"> Wydech ID: 1019 </label>
+        <label><input type="radio" name="czesci_wydechy" value="w1020"> Wydech ID: 1020 </label>
+        <label><input type="radio" name="czesci_wydechy" value="w1021"> Wydech ID: 1021 </label>
+        <label><input type="radio" name="czesci_wydechy" value="w1022"> Wydech ID: 1022 </label>
+        <label><input type="radio" name="czesci_wydechy" value="w1028"> Wydech ID: 1028 </label>
+        <label><input type="radio" name="czesci_wydechy" value="w1029"> Wydech ID: 1029 </label>
+        <label><input type="radio" name="czesci_wydechy" value="w1034"> Wydech ID: 1034 </label>
+        <label><input type="radio" name="czesci_wydechy" value="w1037"> Wydech ID: 1037 </label>
+        <label><input type="radio" name="czesci_wydechy" value="w1043"> Wydech ID: 1043 </label>
+        <label><input type="radio" name="czesci_wydechy" value="w1044"> Wydech ID: 1044 </label>
+        <label><input type="radio" name="czesci_wydechy" value="w1045"> Wydech ID: 1045 </label>
+        <label><input type="radio" name="czesci_wydechy" value="w1046"> Wydech ID: 1046 </label>
+        <label><input type="radio" name="czesci_wydechy" value="w1059"> Wydech ID: 1059 </label>
+        <label><input type="radio" name="czesci_wydechy" value="w1064"> Wydech ID: 1064 </label>
+        <label><input type="radio" name="czesci_wydechy" value="w1065"> Wydech ID: 1065 </label>
+        <label><input type="radio" name="czesci_wydechy" value="w1066"> Wydech ID: 1066 </label>
+        <label><input type="radio" name="czesci_wydechy" value="w1089"> Wydech ID: 1089 </label>
+        <label><input type="radio" name="czesci_wydechy" value="w1092"> Wydech ID: 1092 </label>
+        <label><input type="radio" name="czesci_wydechy" value="w1104"> Wydech ID: 1104 </label>
+        <label><input type="radio" name="czesci_wydechy" value="w1105"> Wydech ID: 1105 </label>
+        <label><input type="radio" name="czesci_wydechy" value="w1113"> Wydech ID: 1113 </label>
+        <label><input type="radio" name="czesci_wydechy" value="w1114"> Wydech ID: 1114 </label>
+        <label><input type="radio" name="czesci_wydechy" value="w1126"> Wydech ID: 1126 </label>
+        <label><input type="radio" name="czesci_wydechy" value="w1127"> Wydech ID: 1127 </label>
+        <label><input type="radio" name="czesci_wydechy" value="w1129"> Wydech ID: 1129 </label>
+        <label><input type="radio" name="czesci_wydechy" value="w1132"> Wydech ID: 1132 </label>
+        <label><input type="radio" name="czesci_wydechy" value="w1135"> Wydech ID: 1135 </label>
+        <label><input type="radio" name="czesci_wydechy" value="w1136"> Wydech ID: 1136 </label>
+        <h5>Tylny zderzak</h5>
+        <label><input type="radio" name="czesci_zderzaktyl" value="brak"> BRAK</label>
+        <label><input type="radio" name="czesci_zderzaktyl" value="zt1140"> Tylny zderzak ID: 1140 </label>
+        <label><input type="radio" name="czesci_zderzaktyl" value="zt1141"> Tylny zderzak ID: 1141 </label>
+        <label><input type="radio" name="czesci_zderzaktyl" value="zt1148"> Tylny zderzak ID: 1148 </label>
+        <label><input type="radio" name="czesci_zderzaktyl" value="zt1149"> Tylny zderzak ID: 1149 </label>
+        <label><input type="radio" name="czesci_zderzaktyl" value="zt1151"> Tylny zderzak ID: 1151 </label>
+        <label><input type="radio" name="czesci_zderzaktyl" value="zt1154"> Tylny zderzak ID: 1154 </label>
+        <label><input type="radio" name="czesci_zderzaktyl" value="zt1156"> Tylny zderzak ID: 1156 </label>
+        <label><input type="radio" name="czesci_zderzaktyl" value="zt1159"> Tylny zderzak ID: 1159 </label>
+        <label><input type="radio" name="czesci_zderzaktyl" value="zt1161"> Tylny zderzak ID: 1161 </label>
+        <label><input type="radio" name="czesci_zderzaktyl" value="zt1167"> Tylny zderzak ID: 1167 </label>
+        <label><input type="radio" name="czesci_zderzaktyl" value="zt1168"> Tylny zderzak ID: 1168 </label>
+        <label><input type="radio" name="czesci_zderzaktyl" value="zt1178"> Tylny zderzak ID: 1178 </label>
+        <label><input type="radio" name="czesci_zderzaktyl" value="zt1180"> Tylny zderzak ID: 1180 </label>
+        <label><input type="radio" name="czesci_zderzaktyl" value="zt1183"> Tylny zderzak ID: 1183 </label>
+        <label><input type="radio" name="czesci_zderzaktyl" value="zt1184"> Tylny zderzak ID: 1184 </label>
+        <label><input type="radio" name="czesci_zderzaktyl" value="zt1186"> Tylny zderzak ID: 1186 </label>
+        <label><input type="radio" name="czesci_zderzaktyl" value="zt1187"> Tylny zderzak ID: 1187 </label>
+        <label><input type="radio" name="czesci_zderzaktyl" value="zt1193"> Tylny zderzak ID: 1193 </label>
+        <h5>Przedni zderzak</h5>
+        <label><input type="radio" name="czesci_zderzakprzod" value="brak"> BRAK</label>
+        <label><input type="radio" name="czesci_zderzakprzod" value="zp1117"> Przedni zderzak ID: 1117 </label>
+        <label><input type="radio" name="czesci_zderzakprzod" value="zp1152"> Przedni zderzak ID: 1152 </label>
+        <label><input type="radio" name="czesci_zderzakprzod" value="zp1153"> Przedni zderzak ID: 1153 </label>
+        <label><input type="radio" name="czesci_zderzakprzod" value="zp1155"> Przedni zderzak ID: 1155 </label>
+        <label><input type="radio" name="czesci_zderzakprzod" value="zp1157"> Przedni zderzak ID: 1157 </label>
+        <label><input type="radio" name="czesci_zderzakprzod" value="zp1160"> Przedni zderzak ID: 1160 </label>
+        <label><input type="radio" name="czesci_zderzakprzod" value="zp1165"> Przedni zderzak ID: 1165 </label>
+        <label><input type="radio" name="czesci_zderzakprzod" value="zp1166"> Przedni zderzak ID: 1166 </label>
+        <label><input type="radio" name="czesci_zderzakprzod" value="zp1169"> Przedni zderzak ID: 1169 </label>
+        <label><input type="radio" name="czesci_zderzakprzod" value="zp1170"> Przedni zderzak ID: 1170 </label>
+        <label><input type="radio" name="czesci_zderzakprzod" value="zp1171"> Przedni zderzak ID: 1171 </label>
+        <label><input type="radio" name="czesci_zderzakprzod" value="zp1172"> Przedni zderzak ID: 1172 </label>
+        <label><input type="radio" name="czesci_zderzakprzod" value="zp1173"> Przedni zderzak ID: 1173 </label>
+        <label><input type="radio" name="czesci_zderzakprzod" value="zp1179"> Przedni zderzak ID: 1179 </label>
+        <label><input type="radio" name="czesci_zderzakprzod" value="zp1181"> Przedni zderzak ID: 1181 </label>
+        <label><input type="radio" name="czesci_zderzakprzod" value="zp1182"> Przedni zderzak ID: 1182 </label>
+        <label><input type="radio" name="czesci_zderzakprzod" value="zp1188"> Przedni zderzak ID: 1188 </label>
+        <label><input type="radio" name="czesci_zderzakprzod" value="zp1189"> Przedni zderzak ID: 1189 </label>
+        <label><input type="radio" name="czesci_zderzakprzod" value="zp1190"> Przedni zderzak ID: 1190 </label>
+        <label><input type="radio" name="czesci_zderzakprzod" value="zp1191"> Przedni zderzak ID: 1191 </label>
+        <h5>Dach</h5>
+        <label><input type="radio" name="czesci_dach" value="brak"> BRAK</label>
+        <label><input type="radio" name="czesci_dach" value="d1006"> Dach ID: 1006 </label>
+        <label><input type="radio" name="czesci_dach" value="d1032"> Dach ID: 1032 </label>
+        <label><input type="radio" name="czesci_dach" value="d1033"> Dach ID: 1033 </label>
+        <label><input type="radio" name="czesci_dach" value="d1035"> Dach ID: 1035 </label>
+        <label><input type="radio" name="czesci_dach" value="d1053"> Dach ID: 1053 </label>
+        <label><input type="radio" name="czesci_dach" value="d1054"> Dach ID: 1054 </label>
+        <label><input type="radio" name="czesci_dach" value="d1055"> Dach ID: 1055 </label>
+        <label><input type="radio" name="czesci_dach" value="d1061"> Dach ID: 1061 </label>
+        <label><input type="radio" name="czesci_dach" value="d1067"> Dach ID: 1067 </label>
+        <label><input type="radio" name="czesci_dach" value="d1068"> Dach ID: 1068 </label>
+        <label><input type="radio" name="czesci_dach" value="d1088"> Dach ID: 1088 </label>
+        <label><input type="radio" name="czesci_dach" value="d1091"> Dach ID: 1091 </label>
+        <label><input type="radio" name="czesci_dach" value="d1128"> Dach ID: 1128 </label>
+        <label><input type="radio" name="czesci_dach" value="d1131"> Dach ID: 1131 </label>
+        <h5>Maska</h5>
+        <label><input type="radio" name="czesci_maska" value="brak"> BRAK</label>
+        <label><input type="radio" name="czesci_maska" value="m1011"> Maska ID: 1011 </label>
+        <label><input type="radio" name="czesci_maska" value="m1012"> Maska ID: 1012 </label>
+        <label><input type="radio" name="czesci_maska" value="m1142"> Maska ID: 1142 </label>
+        <label><input type="radio" name="czesci_maska" value="m1144"> Maska ID: 1144 </label>
+        <h5>Tylnie lampy</h5>
+        <label><input type="radio" name="czesci_lampytyl" value="brak"> BRAK</label>
+        <label><input type="radio" name="czesci_lampytyl" value="lt1109"> Tylnie lampy ID: 1109 </label>
+        <label><input type="radio" name="czesci_lampytyl" value="lt1110"> Tylnie lampy ID: 1110 </label>
+        <h5>Przednie lampy</h5>
+        <label><input type="radio" name="czesci_lampyprzod" value="brak"> BRAK</label>
+        <label><input type="radio" name="czesci_lampyprzod" value="lp1115"> Przednie lampy ID: 1115 </label>
+        <label><input type="radio" name="czesci_lampyprzod" value="lp1116"> Przednie lampy ID: 1116 </label>
+        <h5>Reflektory</h5>
+        <label><input type="radio" name="czesci_reflektory" value="brak"> BRAK</label>
+        <label><input type="radio" name="czesci_reflektory" value="r1013"> Reflektor ID: 1013 </label>
+        <label><input type="radio" name="czesci_reflektory" value="r1024"> Reflektor ID: 1024 </label>
+        <h5>Wenty</h5>
+        <label><input type="radio" name="czesci_wenty" value="brak"> BRAK</label>
+        <label><input type="radio" name="czesci_wenty" value="went1004"> Went ID: 1004 </label>
+        <label><input type="radio" name="czesci_wenty" value="went1005"> Went ID: 1005 </label>
+        <h5>Bodykity</h5>
+        <h6 class="info-bodykit">Spis oraz cennik bodykitów znajdziesz pod <a href="https://projectrpg.pl/topic/38312-🚗-wszystko-o-bodykitach-cena-wygląd-level-rajdowca/" target="_blank">tym</a> linkiem <br>(wliczamy całą cenę bodykitu do wyniku na dole)</h6>
+        <h3>Komponenty</h3>
+        <h5>Klucz</h5>
+        <h6 class="info-bodykit">Za każdy klucz wliczamy jego pełną cenę (np mając 2 klucze wliczamy 20000$ do ceny na dole)</h6>
+        <h5>Tablica rejestracyjna</h5>
+        <label><input type="radio" name="czesci_rejka" value="brak"> BRAK</label>
+        <label><input type="radio" name="czesci_rejka" value="rejka"> Zamontowana </label>
+        <h5>Silnik</h5>
+        <h6 class="info-bodykit">Do ceny podanej na dole wliczamy koszt każdego upgrade silnika dla tego pojazdu (np w sultanie wszystkie upgrade kosztują łącznie 100000$, więc taką kwotę doliczymy do tej na dole)</h6>
+        <h5>Szyby</h5>
+        <label><input type="radio" name="czesci_szyby" value="brak"> BRAK</label>
+        <label><input type="radio" name="czesci_szyby" value="szyby10"> 10% </label>
+        <label><input type="radio" name="czesci_szyby" value="szyby20"> 20% </label>
+        <label><input type="radio" name="czesci_szyby" value="szyby30"> 30% </label>
+        <label><input type="radio" name="czesci_szyby" value="szyby40"> 40% </label>
+        <label><input type="radio" name="czesci_szyby" value="szyby50"> 50% </label>
+        <label><input type="radio" name="czesci_szyby" value="szyby60"> 60% </label>
+        <label><input type="radio" name="czesci_szyby" value="szyby70"> 70% </label>
+        <label><input type="radio" name="czesci_szyby" value="szyby80"> 80% </label>
+        <label><input type="radio" name="czesci_szyby" value="szyby90"> 90% </label>
+        <label><input type="radio" name="czesci_szyby" value="szyby100"> 100% </label>
+        <h5>Aplikacja transportowa</h5>
+        <label><input type="radio" name="czesci_apka" value="brak"> BRAK</label>
+        <label><input type="radio" name="czesci_apka" value="apka1"> Podstawowa</label>
+        <label><input type="radio" name="czesci_apka" value="apka2"> PRO</label>
+        <h5>Podświetlenie licznika</h5>
+        <h6 class="info-bodykit">Cenę każdych liczników doliczamy do ceny na dole</h6>
+        <h5>Kolor świateł</h5>
+        <h6 class="info-bodykit">Cenę każdych świateł doliczamy do ceny na dole</h6>
+        <h3>Wulkanizacja</h3>
+        <h5>Model ogumienia</h5>
+        <label><input type="radio" name="czesci_modguma" value="modguma-standard"> Standardowe</label>
+        <label><input type="radio" name="czesci_modguma" value="modguma-teren"> Terenowe</label>
+        <label><input type="radio" name="czesci_modguma" value="modguma-drift"> Drift</label>
+        <label><input type="radio" name="czesci_modguma" value="modguma-sport"> Sportowe</label>
+        <h5>Rozmiar felg</h5>
+        <label><input type="radio" name="czesci_rozmiarfela" value="rozmiarfela-standard"> Standardowy</label>
+        <label><input type="radio" name="czesci_rozmiarfela" value="rozmiarfela-bmale"> Bardzo małe</label>
+        <label><input type="radio" name="czesci_rozmiarfela" value="rozmiarfela-male"> Małe</label>
+        <label><input type="radio" name="czesci_rozmiarfela" value="rozmiarfela-duze"> Duże</label>
+        <h5>Poszerzenie przód</h5>
+        <label><input type="radio" name="czesci_poszprz" value="brak"> BRAK</label>
+        <label><input type="radio" name="czesci_poszprz" value="poszprz1"> Poziom pierwszy</label>
+        <label><input type="radio" name="czesci_poszprz" value="poszprz2"> Poziom drugi</label>
+        <h5>Poszerzenie tył</h5>
+        <label><input type="radio" name="czesci_posztyl" value="brak"> BRAK</label>
+        <label><input type="radio" name="czesci_posztyl" value="posztyl1"> Poziom pierwszy</label>
+        <label><input type="radio" name="czesci_posztyl" value="posztyl2"> Poziom drugi</label>
+		<button type="button" onclick="obliczCene(document.getElementById('cena_pojazdu').value)">Oblicz cenę</button>
+        <h6 class="info-cena">*przed obliczeniem ceny upewnij się, że wpisałeś cenę czystego pojazdu!</h6>
+	</form>
+	<p id="wynik">Łączna cena pojazdu wynosi: <span id="cena"></span></p>
+</body>
+</html>
